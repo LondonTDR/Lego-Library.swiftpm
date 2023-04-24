@@ -2,11 +2,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+  Text("Lego Library")
+            .font(.largeTitle)
+            .foregroundColor(.red)
+            .padding()
+        Spacer()
+        Text("Start")
+            .foregroundColor(.blue)
+            .padding()
+        Spacer()
     }
 }
