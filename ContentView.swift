@@ -13,7 +13,6 @@ struct ContentView: View {
             Text("Start")
                 .foregroundColor(.blue)
                 .padding()
-            Spacer()
         }
     }
 }
