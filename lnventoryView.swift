@@ -37,4 +37,5 @@ struct InventoryView: View {
                 }
             }
         }
+        
     }
