@@ -14,5 +14,6 @@ struct ContentView: View {
                 .foregroundColor(.blue)
                 .padding()
         }
+        .navigationViewStyle(.stack)
     }
 }
