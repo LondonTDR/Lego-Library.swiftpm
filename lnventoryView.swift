@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InventoryView: View {
     
-
+    
     @State var All:[LegoAmount] = []
     
     @State var newLego: String = ""
@@ -21,14 +21,14 @@ struct InventoryView: View {
     var body: some View {
         
         
-        VStack { 
+        VStack {
             HStack {
                 Text("Inventory")
                     .foregroundColor(.red)
                     .font(.system(size: 30))
                     .frame(width: 200, height: 100)
                 
-               
+                
                 
                 NavigationLink("+")  {
                     AddView(newLego: $newLego, newAmount: $newAmount, All: $All)
@@ -49,21 +49,48 @@ struct InventoryView: View {
                 ListView(currentLegoAmount: currentLegoAmount)
                     .font(.system(size: 30))
                     .background(.gray)
-             
+                
                 
                 
             }
             
         }
-        
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.bottomBar){
+                Button {
+                    
+                } label: {
+                    Image(systemName: "bag.fill")
+                }
+                Spacer()
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.bottomBar) {
+                NavigationLink {
+                    SearchView()
+                } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+                Spacer()
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.bottomBar) {
+                NavigationLink {
+                    LibraryView()
+                } label: {
+                    Image(systemName: "books.vertical")
+                }
+                
+            }
+        }
     }
     
-    
-    
-    
-    
-    
 }
+
+
+
+
+
+
+
 
 
 
