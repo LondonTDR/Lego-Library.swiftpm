@@ -12,9 +12,12 @@ struct ContentView: View {
             .font(.largeTitle)
             .foregroundColor(.red)
             .padding()
+            .frame(width: .infinity, height: .infinity)
+            .foregroundColor(.red)
             Text("Start")
                 .foregroundColor(.blue)
                 .padding()
         }
+        .navigationViewStyle(.stack)
     }
 }
