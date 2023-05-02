@@ -1,57 +1,59 @@
-//
-//  AddView.swift
-//  Lego_Library
-//
-//  Created by Lincoln Drake on 4/26/23.
-//
-
 import SwiftUI
 
 struct AddView: View {
+    
+    @Binding var newLego:String
+    
+   @Binding var newAmount:String
+    
+    @Binding var All:[LegoAmount]
+
+    
+    
+    
+    
     var body: some View {
-  
+        
         HStack {
-                        
-                        TextField(" LegoType ", text: $newLegoType)
-                            .border(Color.gray, width: 3)
-                            .background(.orange)
-                            .font(.system(size: 30))
-                            .bold()
-                            .frame(width: 175, height: 100)
-                        
-                        TextField("#", text: $newAmount)
-                            .border(Color.gray, width: 3)
-                            .background(.orange)
-                            .font(.system(size: 30))
-                            .bold()
-                            .frame(width: 175, height: 100)
-                      
-                        Button(action: {
-                            
-                            let newLegoBlock = legoType(LegoType: newLegoType, amount: newAmount)
-                            
-                            All.append(newBlockAmount)
-                            
-                        }
-                                                , label: {
-                                             Circle()
-                                                 .frame(width: 50, height: 50)
-                                                 .foregroundColor(.red)
-                                             
-                                         })
-                                         
-                                         
-                                         
-                                         
-                                         
-                                     }
-                                 }
-                             
-                                 .background(.yellow)
-                             }
-                         }
-
-
+            
+            TextField("        Lego ", text: $newLego)
+                .border(Color.yellow, width: 3)  
+                .background(.blue)
+                .font(.system(size: 30))
+                .frame(width: 175, height: 100)
+            
+            TextField("     Amount ", text: $newAmount)
+                .border(Color.yellow, width: 3)  
+                .background(.blue)
+                .font(.system(size: 30))
+                .frame(width: 175, height: 100)
+            
+            Button(action: {
+                
+                let newLegoAmount = LegoAmount(Lego: newLego, Amount: newAmount)
+                
+                All.append(newLegoAmount)
+                
+                
+            }
+                   , label: {
+                Circle()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.red)
+                
+            })     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        
+        
     }
+    
 }
-
