@@ -33,7 +33,7 @@ struct SearchView: View {
         VStack{
             List(items, children: \.items) { row in
                 Image(row.userImage)
-                Text(row.lid
+                Text(row.lid)
                 Text(row.name)
                 }
             }
