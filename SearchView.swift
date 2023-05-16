@@ -10,27 +10,30 @@ import SwiftUI
 struct Bookmark: Identifiable {
     let id = UUID()
     let name: String
+    let lid: String
+    let userImage: String
     var items: [Bookmark]?
     
-    static let brick_2x4=Bookmark(name: "brick 2x4")
-    static let brick_2x3=Bookmark(name: "brick 2x3")
-    static let brick_2x2=Bookmark(name: "brick 2x4")
+    static let brick_2x4=Bookmark(name: "brick 2x4", lid: "3001", userImage: "M3001")
+    static let brick_2x3=Bookmark(name: "brick 2x3", lid: "3002", userImage: "M3002")
+    static let brick_2x2=Bookmark(name: "brick 2x4", lid: "3003", userImage: "M3003")
     
-    static let basic=Bookmark(name: "Basic", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
-    static let architectural=Bookmark(name: "Architectural", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
-    static let transportation=Bookmark(name: "Transportation", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
-    static let space=Bookmark(name: "Space", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
-    static let brick=Bookmark(name: "Brick", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
-    static let solid_Studs=Bookmark(name: "Solid Studs", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let basic=Bookmark(name: "Basic", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let architectural=Bookmark(name: "Architectural", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let transportation=Bookmark(name: "Transportation", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let space=Bookmark(name: "Space", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let brick=Bookmark(name: "Brick", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
+    static let solid_Studs=Bookmark(name: "Solid Studs", lid: "0", userImage: "white", items: [Bookmark.brick_2x4, Bookmark.brick_2x3, Bookmark.brick_2x2])
 }
 
 struct SearchView: View {
     // https://legouniverse.fandom.com/wiki/List_of_Bricks
-    let bricks=["Brick 2x4","Brick 2x3","Brick 2x2"]
     let items: [Bookmark]=[.basic, .architectural, .transportation, .space, .brick, .solid_Studs]
     var body: some View {
         VStack{
             List(items, children: \.items) { row in
+                Image(row.userImage)
+                Text(row.lid
                 Text(row.name)
                 }
             }
