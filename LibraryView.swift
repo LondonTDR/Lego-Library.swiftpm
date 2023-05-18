@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct LibraryView: View {
+    let sets=["Double-Decker Couch", "Batman and Super Angry Kitty Attack", "Bad Cop Car Chase"]
     var body: some View {
         VStack{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            NavigationLink("Double-Decker Couch"){
+                DoubleDeckerCouchView()
+            }
+            NavigationLink("Batman and Super Angry Kitty Attack"){
+                BatmanAndSuperAngryKittyAttackView()
+            }
+            NavigationLink("Bad Cop Car Chase"){
+                BadCopCarChaseView()
+            }
         }
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.bottomBar){

@@ -28,6 +28,7 @@ struct Bookmark: Identifiable {
 
 struct SearchView: View {
     // https://legouniverse.fandom.com/wiki/List_of_Bricks
+    // https://brickset.com/parts/category-Animals-And-Creatures
     let items: [Bookmark]=[.basic, .architectural, .transportation, .space, .brick, .solid_Studs]
     var body: some View {
         VStack{
