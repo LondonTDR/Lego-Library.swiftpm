@@ -10,7 +10,7 @@ struct ListView: View {
             
             Text(currentLegoAmount.Lego).font(.system(size: 25))
             
-            Text("\(currentLegoAmount.Amount)").font(.system(size: 15 ))
+            Text("\(currentLegoAmount.Amount!)").font(.system(size: 15))
             
             
             
