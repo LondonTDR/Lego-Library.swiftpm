@@ -43,7 +43,7 @@ struct AddView: View {
                    , label: {
              
                 
-            })     
+            })
             
             
             
