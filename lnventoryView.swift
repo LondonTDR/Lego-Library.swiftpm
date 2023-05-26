@@ -26,7 +26,7 @@ struct InventoryView: View {
                 Text("Inventory")
                     .foregroundColor(.red)
                     .font(.system(size: 30))
-                    .frame(width: 200, height: 100)
+                    .frame(width: 600, height: 100)
                 
                 Spacer()
                 
@@ -35,6 +35,7 @@ struct InventoryView: View {
                     
                     
                 }
+                .frame(width: 600, height: 100)
                 
                 
                 
