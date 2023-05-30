@@ -7,17 +7,18 @@ struct ContentView: View {
             NavigationLink("Start"){
                 InventoryView()
             }
-            
-            .navigationTitle("Lego Library")
-            .font(.largeTitle)
-            .foregroundColor(.red)
-            .padding()
-            .frame(width: .infinity, height: .infinity)
-            .foregroundColor(.red)
+                        
             Text("Start")
-                .foregroundColor(.blue)
+                .foregroundColor(.red)
                 .padding()
+            
+                .navigationTitle("Lego Library")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+                .padding()
+
         }
+        
         .navigationViewStyle(.stack)
     }
 }

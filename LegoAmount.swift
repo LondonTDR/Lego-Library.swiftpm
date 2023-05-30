@@ -4,7 +4,7 @@ struct LegoAmount: Hashable {
     
     var Lego: String
     
-    var Amount: String
+    var Amount: Int?
     
     
     

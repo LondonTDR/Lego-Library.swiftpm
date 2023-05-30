@@ -14,7 +14,7 @@ struct InventoryView: View {
     
     @State var newLego: String = ""
     
-    @State var newAmount: String = ""
+    @State var newAmount: Int?
     
     
     var body: some View {
@@ -32,15 +32,16 @@ struct InventoryView: View {
                 Text("Inventory")
                     .foregroundColor(.red)
                     .font(.system(size: 30))
-                    .frame(width: 200, height: 100)
+                    .frame(width: 600, height: 100)
                 
-                
+                Spacer()
                 
                 NavigationLink("+")  {
                     AddView(newLego: $newLego, newAmount: $newAmount, All: $All)
                     
                     
                 }
+                .frame(width: 600, height: 100)
                 
                 
                 
