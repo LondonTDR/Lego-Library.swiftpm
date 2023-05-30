@@ -17,9 +17,15 @@ struct InventoryView: View {
     @State var newAmount: String = ""
     
     
-    
     var body: some View {
         
+        let arrayTest=[LegoAmount(Lego: "brick 2x4", Amount: "2"), LegoAmount(Lego: "brick 2x2", Amount: "1")]
+        
+        let AllSet=Set(All)
+        
+        let arrayTestSet=Set(arrayTest)
+        
+        let allElemsContained=arrayTestSet.isSubset(of: AllSet)
         
         VStack {
             HStack {
@@ -49,11 +55,12 @@ struct InventoryView: View {
                 ListView(currentLegoAmount: currentLegoAmount)
                     .font(.system(size: 30))
                     .background(.gray)
-                
-                
-                
             }
-            
+            Button("Check"){
+                if allElemsContained==true{
+                    print("IT WORKS")
+                }
+            }
         }
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.bottomBar){
