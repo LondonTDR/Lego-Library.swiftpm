@@ -12,7 +12,7 @@ struct AddView: View {
         
         HStack {
             
-            TextField("        Lego ", text:$newLego)
+            TextField("Brick", text:$newLego)
                 .border(Color.yellow, width: 3)  
                 .background(.blue)
                 .font(.system(size: 30))
@@ -22,7 +22,7 @@ struct AddView: View {
             VStack {
                 
                 
-                TextField("     Number ", value: $newAmount, format: .number)
+                TextField(" # Only", value: $newAmount, format: .number)
                     .border(Color.yellow, width: 3)
                     .background(.blue)
                     .font(.system(size: 30))
