@@ -19,7 +19,7 @@ struct InventoryView: View {
     
     var body: some View {
         
-        let arrayTest=[LegoAmount(Lego: "brick 2x4", Amount: "2"), LegoAmount(Lego: "brick 2x2", Amount: "1")]
+        let arrayTest=[LegoAmount(Lego: "brick 2x4", Amount: 2), LegoAmount(Lego: "brick 2x2", Amount: 1)]
         
         let AllSet=Set(All)
         
