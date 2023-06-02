@@ -19,7 +19,7 @@ struct InventoryView: View {
     
     var body: some View {
         
-        let arrayTest=[LegoAmount(Lego: "brick 2x4", Amount: 2), LegoAmount(Lego: "brick 2x2", Amount: 1)]
+        let arrayTest=[LegoAmount(Lego: "Bar 1L with Clip Mechanical Claw", Amount: 1), LegoAmount(Lego: "Slope 30 1 x 1 x 2/3", Amount: 4), LegoAmount(Lego: "Hips and Dark Blue Legs with Silver Belt Buckle, Pull Tab and Knee Pads Pattern", Amount: 2), LegoAmount(Lego: "Plate 2 x 4", Amount: 7), LegoAmount(Lego: "Tile, Modified 1 x 2 Grille with Bottom Groove / Lip", Amount: 1), LegoAmount(Lego: "Plate 4 x 4", Amount: 1), LegoAmount(Lego: "Plate 6 x 8", Amount: 1), LegoAmount(Lego: "Technic, Axle and Pin Connector Perpendicular", Amount: 4), LegoAmount(Lego: "Tile, Round 1 x 1", Amount: 1)]
         
         let AllSet=Set(All)
         
@@ -59,7 +59,9 @@ struct InventoryView: View {
             }
             Button("Check"){
                 if allElemsContained==true{
-                    print("IT WORKS")
+                    print("You can make the test set")
+                }else{
+                  print("You can't")
                 }
             }
         }
